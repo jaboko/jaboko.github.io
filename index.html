@@ -22,31 +22,19 @@
 
   <body>
   
-  <div id="vk_api_transport"></div>
-<script type="text/javascript">
-  window.vkAsyncInit = function() {
-    VK.init({
-      apiId: 4804398
-    });
-    
-    VK.Auth.getLoginStatus(authInfo);
-  };
-  
-  function authInfo(response) {
-  if (response.session) {
-    alert('user: '+response.session.mid);
-  } else {
-    alert('not auth');
-  }
-}
+<script src="//vk.com/js/api/xd_connection.js?2"  type="text/javascript">
+</script>
 
-  setTimeout(function() {
-    var el = document.createElement("script");
-    el.type = "text/javascript";
-    el.src = "//vk.com/js/api/openapi.js";
-    el.async = true;
-    document.getElementById("vk_api_transport").appendChild(el);
-  }, 0);
+<script type="text/javascript"> 
+  VK.init(function() { 
+    console.debug(arguments);
+  }, function() { 
+    console.debug(arguments);
+}, '5.28'); 
+</script>
+
+
+<script type="text/javascript">
 </script>
 
     <a id="forkme_banner" href="https://github.com/jaboko">View on GitHub</a>
