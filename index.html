@@ -27,9 +27,7 @@
 
 <script type="text/javascript"> 
   VK.init(function() { 
-    console.debug(arguments);
-    console.debug(VK);
-    console.debug(document);
+    VK.Widgets.Comments("vk_comments", {limit: 10, width: "578", attach: "*", pageURL: "http://vkontakte.ru/app4804398"});
   }, function() { 
     console.debug(arguments);
 }, '5.28'); 
