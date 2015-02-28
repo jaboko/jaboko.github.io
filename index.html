@@ -21,6 +21,33 @@
   </head>
 
   <body>
+  
+  <div id="vk_api_transport"></div>
+<script type="text/javascript">
+  window.vkAsyncInit = function() {
+    VK.init({
+      apiId: 4800773
+    });
+  };
+  
+  function authInfo(response) {
+  if (response.session) {
+    alert('user: '+response.session.mid);
+  } else {
+    alert('not auth');
+  }
+}
+VK.Auth.getLoginStatus(authInfo);
+
+  setTimeout(function() {
+    var el = document.createElement("script");
+    el.type = "text/javascript";
+    el.src = "//vk.com/js/api/openapi.js";
+    el.async = true;
+    document.getElementById("vk_api_transport").appendChild(el);
+  }, 0);
+</script>
+
     <a id="forkme_banner" href="https://github.com/jaboko">View on GitHub</a>
     <div class="shell">
 
