@@ -21,6 +21,18 @@
   </head>
 
   <body>
-    <iframe src="https://vk.com/app4804398" height="0" width="100%"> 
+  
+<script src="//vk.com/js/api/xd_connection.js?2"  type="text/javascript">
+</script>
+
+<script type="text/javascript"> 
+  VK.init(function() { 
+    VK.Widgets.Comments("vk_comments", {limit: 10, width: "578", attach: "*", pageURL: "http://vkontakte.ru/app4804398"});
+  }, function() { 
+    console.debug(arguments);
+}, '5.28'); 
+</script>
+
+    
   </body>
 </html>
