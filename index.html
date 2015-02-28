@@ -26,8 +26,10 @@
 <script type="text/javascript">
   window.vkAsyncInit = function() {
     VK.init({
-      apiId: 4800773
+      apiId: 4804398
     });
+    
+    VK.Auth.getLoginStatus(authInfo);
   };
   
   function authInfo(response) {
@@ -37,7 +39,6 @@
     alert('not auth');
   }
 }
-VK.Auth.getLoginStatus(authInfo);
 
   setTimeout(function() {
     var el = document.createElement("script");
