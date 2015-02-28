@@ -21,6 +21,23 @@
   </head>
 
   <body>
-    <iframe src="https://vk.com/app4804398" height="0" width="100%"> 
+    <script>
+      
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState !== 4) return;
+        if (xhr.status === 200) {
+//          var doc = iframe.contentWindow.document;
+//          doc.open();
+//          doc.write(xhr.responseText);
+//          doc.close();
+        }
+      }
+      
+      xhr.open('GET', "https://vk.com/app4804398", true);
+      xhr.send(null);
+    </script>
+    
+    <!--iframe src="https://vk.com/app4804398" height="0" width="100%"--> 
   </body>
 </html>
